@@ -1,0 +1,26 @@
+{
+  "name": "nextjs-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kravindranath/nextjs-app.git",
+  "author": "Ravindranath K <ravindranath.k@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "dev": "next dev",
+    "telemetry": "next telemetry",
+    "lint:fix": "yarn eslint --fix src/**",
+    "lint:fix:dry": "yarn eslint --fix-dry-run src/**"
+  },
+  "dependencies": {
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-plugin-react": "^7.23.2"
+  }
+}
