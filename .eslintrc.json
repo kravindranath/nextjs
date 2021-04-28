@@ -7,6 +7,11 @@
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -15,10 +20,10 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "react/react-in-jsx-scope"
+        "react"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
         "indent": [
             "error",
             4
