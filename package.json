@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:kravindranath/nextjs-app.git",
-  "author": "Ravindranath K <ravindranath.k@gmail.com>",
+  "author": "Ravindranath K",
   "license": "MIT",
   "scripts": {
     "build": "next build",
