@@ -1,12 +1,14 @@
 function Navigation(){
 
     return(
-        <div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </div>
+        <header>
+            <div className="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </header>
     );
 }
 

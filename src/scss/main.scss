@@ -1,0 +1,12 @@
+@import '_vars.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $primary-color;
+}
+
+.layout{
+    padding: 20px;
+}
