@@ -1,28 +1,28 @@
 import Navigation from 'src/ui/Navigation';
 import Layout from 'src/ui/Layout';
+import List from 'src/ui/List';
+import { getLabel } from 'src/utils/api';
+import { parseLabel } from 'src/parsers/parserLabel';
 
-function HomePage(){
+function HomePage(props){
     return (
         <div>
             <Navigation />
             <Layout>
                 <h1>Home page</h1>
+                <List data={props.results} />
             </Layout>
         </div>
     );
 }
-
-export async function getServerSideProps(context) {
-    console.log('process =>', process.env.API_KEY);
-    const url = `https://api.fda.gov/drug/label.json?api_key=${process.env.API_KEY}&limit=10`;
-    const responseData = await fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            return data;
-        });
+export async function getServerSideProps() {
+    const responseData = await getLabel({ limit: 10 });
+    const parsedData = parseLabel(responseData);
     return {
-        props: responseData || {}, // will be passed to the page component as props
+        props: parsedData || {},
     };
 }
 
 export default HomePage;
+
+
