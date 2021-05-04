@@ -8,6 +8,7 @@ export function parseLabel(_data) {
     const data = _data || {};
     const results = _map(data.results, (item)=>{
         const description = _get(item, 'description', EMPTY_STR);
+        const applicationNumber = _get(item, 'openfda.application_number', EMPTY_STR);
         const name = _get(item, 'openfda.brand_name', EMPTY_STR);
         const genericName = _get(item, 'openfda.generic_name', EMPTY_STR);
         const manufacturer = _get(item, 'openfda.manufacturer_name', EMPTY_STR);
@@ -20,6 +21,7 @@ export function parseLabel(_data) {
         if(nameLen > 0) {
             return {
                 description: getFirst(description),
+                applicationNumber: getFirst(applicationNumber),
                 name: getFirst(name),
                 genericName: getFirst(genericName),
                 manufacturer: getFirst(manufacturer),

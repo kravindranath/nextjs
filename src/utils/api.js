@@ -6,6 +6,12 @@ export async function getLabel(params) {
     return await fetchAPI(url);
 }
 
+export async function getSearch(params) {
+    const { field, limit, page, keyword } = { ...params };
+    const url = `${COMMON.DOMAIN}/api/search?limit=${limit}&keyword=${keyword}&page=${page}&field=${field}`;
+    return await fetchAPI(url);
+}
+
 export async function fetchAPI(url) {
     const responseData = await fetch(url)
         .then(response => response.json())
