@@ -1,11 +1,14 @@
 
 const API_KEY = process.env.API_KEY;
-const DOMAIN = process.env.domain;
 
 export const API = {
-    label: `https://api.fda.gov/drug/label.json?api_key=${API_KEY}`
+    search: {
+        article: `https://api.nytimes.com/svc/search/v2/articlesearch.json?q?api-key=${API_KEY}`
+    },
+    mostPopular: {
+        shared: `https://api.nytimes.com/svc/mostpopular/v2/viewed/1/facebook.json?api-key=${API_KEY}`,
+        viewed: `https://api.nytimes.com/svc/mostpopular/v2/shared/1.json?api-key=${API_KEY}`
+    }
 };
 
-export const COMMON = {
-    DOMAIN : DOMAIN
-};
+export const COMMON = {};
