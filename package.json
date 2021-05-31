@@ -13,6 +13,7 @@
     "telemetry": "next telemetry"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "lodash": "^4.17.21",
     "next": "^10.0.5",
     "react": "^17.0.1",
